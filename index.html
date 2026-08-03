@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muazzez Durdu — Brand Strategist, Social Media Manager & AI Creative Producer</title>
+<meta name="description" content="Muazzez Durdu — Cologne-based Brand Strategist, Social Media Manager and AI Creative Producer specializing in consumer insight, brand positioning, social media management and Generative AI campaign production.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0A0A;
+    --bg-soft:#111111;
+    --gold:#C9A84C;
+    --gold-soft:rgba(201,168,76,0.35);
+    --cream:#F5F0E8;
+    --cream-dim:rgba(245,240,232,0.62);
+    --line:rgba(245,240,232,0.12);
+    --serif:'Playfair Display', Georgia, serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.6;
+    overflow-x:hidden;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  main{flex:1;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  ::selection{background:var(--gold);color:#0A0A0A;}
+
+  .container{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* NAV */
+  header{
+    position:fixed;
+    top:0;left:0;right:0;
+    z-index:100;
+    background:rgba(10,10,10,0.72);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease, background .3s ease;
+  }
+  header.scrolled{border-bottom-color:var(--line);}
+  nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:22px 32px;
+    max-width:1120px;
+    margin:0 auto;
+  }
+  .logo{
+    font-family:var(--serif);
+    font-size:19px;
+    letter-spacing:0.5px;
+    font-weight:600;
+  }
+  .logo span{color:var(--gold);}
+  .nav-links{
+    display:flex;
+    gap:36px;
+    list-style:none;
+  }
+  .nav-links a{
+    font-size:13px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--cream-dim);
+    transition:color .25s ease;
+    position:relative;
+  }
+  .nav-links a:hover{color:var(--gold);}
+  .nav-toggle{display:none;background:none;border:none;color:var(--cream);font-size:24px;cursor:pointer;}
+
+  /* HERO */
+  .hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    padding-top:100px;
+    background:
+      radial-gradient(circle at 82% 18%, rgba(201,168,76,0.14), transparent 45%),
+      radial-gradient(circle at 10% 85%, rgba(201,168,76,0.08), transparent 40%);
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(rgba(245,240,232,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,240,232,0.035) 1px, transparent 1px);
+    background-size:64px 64px;
+    mask-image:radial-gradient(circle at 60% 40%, black, transparent 70%);
+    pointer-events:none;
+  }
+  .hero-grid{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:1.35fr 0.9fr;
+    gap:64px;
+    align-items:center;
+  }
+  .hero-inner{position:relative;z-index:1;}
+  .hero-photo{
+    position:relative;
+    aspect-ratio:3/4;
+    border:1px solid var(--line);
+    overflow:hidden;
+  }
+  .hero-photo::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(200deg, rgba(201,168,76,0.16), rgba(10,10,10,0.15) 40%, rgba(10,10,10,0.55));
+    pointer-events:none;
+  }
+  .hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 20%;
+  }
+  .hero-photo::before{
+    content:"";
+    position:absolute;
+    top:16px;left:16px;right:16px;bottom:16px;
+    border:1px solid var(--gold-soft);
+    z-index:2;
+    pointer-events:none;
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:28px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:36px;height:1px;
+    background:var(--gold);
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(34px, 4.4vw, 60px);
+    line-height:1.05;
+    max-width:900px;
+    letter-spacing:-0.5px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--gold);
+    font-weight:500;
+  }
+  .hero-sub{
+    margin-top:26px;
+    max-width:600px;
+    font-size:17px;
+    color:var(--cream-dim);
+    font-weight:300;
+  }
+  .hero-actions{
+    margin-top:44px;
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 32px;
+    font-size:13px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    border-radius:2px;
+    transition:all .3s ease;
+    border:1px solid transparent;
+  }
+  .btn-primary{
+    background:var(--gold);
+    color:#0A0A0A;
+    font-weight:500;
+  }
+  .btn-primary:hover{background:#e0c06a;transform:translateY(-2px);}
+  .btn-ghost{
+    border-color:var(--line);
+    color:var(--cream);
+  }
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+
+  .stat-row{
+    margin-top:80px;
+    display:flex;
+    gap:56px;
+    flex-wrap:wrap;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+    max-width:820px;
+  }
+  .stat-row div{font-size:13px;color:var(--cream-dim);}
+  .stat-row strong{
+    display:block;
+    font-family:var(--serif);
+    font-size:22px;
+    color:var(--cream);
+    font-weight:600;
+    margin-bottom:4px;
+  }
+  #content .stat-row{margin-top:50px;padding-top:32px;}
+
+  /* SECTION generic */
+  section{padding:130px 0;position:relative;}
+  .section-label{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:20px;
+  }
+  .section-label span{
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+  .section-label::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+  .section-title{
+    font-family:var(--serif);
+    font-size:clamp(30px, 4vw, 48px);
+    font-weight:600;
+    max-width:700px;
+    margin-bottom:20px;
+  }
+  .section-intro{
+    font-size:16px;
+    color:var(--cream-dim);
+    max-width:680px;
+    margin-bottom:0;
+  }
+
+  /* ABOUT */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+    margin-top:60px;
+  }
+  .about-text p{
+    font-size:17px;
+    color:var(--cream-dim);
+    margin-bottom:22px;
+    font-weight:300;
+  }
+  .about-text strong{color:var(--cream);font-weight:500;}
+  .langs{
+    margin-top:40px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .lang-pill{
+    padding:10px 18px;
+    border:1px solid var(--line);
+    border-radius:100px;
+    font-size:13px;
+    color:var(--cream-dim);
+    letter-spacing:0.3px;
+  }
+  .lang-pill b{color:var(--gold);font-weight:500;}
+
+  .about-side{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+  }
+  .video-card{
+    position:relative;
+    aspect-ratio:9/16;
+    max-height:420px;
+    margin:0 auto;
+    width:100%;
+    max-width:245px;
+    border:1px solid var(--line);
+    overflow:hidden;
+    background:var(--bg-soft);
+  }
+  .video-card::before{
+    content:"";
+    position:absolute;
+    top:14px;left:14px;right:14px;bottom:14px;
+    border:1px solid var(--gold-soft);
+    z-index:2;
+    pointer-events:none;
+  }
+  .video-card video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .video-caption{
+    max-width:245px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .video-caption p{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:15px;
+    line-height:1.5;
+    color:var(--cream);
+  }
+  .video-caption .quote-tag{
+    margin-top:10px;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+  .quote-card{
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    padding:44px;
+    position:relative;
+  }
+  .quote-card::before{
+    content:"“";
+    font-family:var(--serif);
+    font-size:100px;
+    color:var(--gold-soft);
+    position:absolute;
+    top:-10px;left:24px;
+    line-height:1;
+  }
+  .quote-card p{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:22px;
+    line-height:1.5;
+    color:var(--cream);
+    position:relative;
+    z-index:1;
+  }
+  .quote-card .quote-tag{
+    margin-top:24px;
+    font-family:var(--sans);
+    font-style:normal;
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  /* SKILLS */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-top:60px;
+  }
+  .skill-card{
+    background:var(--bg);
+    padding:40px;
+    transition:background .3s ease;
+  }
+  .skill-card:hover{background:var(--bg-soft);}
+  .skill-card h3{
+    font-family:var(--serif);
+    font-size:20px;
+    font-weight:600;
+    color:var(--gold);
+    margin-bottom:18px;
+  }
+  .tag-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+  }
+  .tag{
+    font-size:12.5px;
+    color:var(--cream-dim);
+    border:1px solid var(--line);
+    padding:7px 14px;
+    letter-spacing:0.3px;
+  }
+
+  /* TOOL BADGES */
+  .badge-category-label{
+    font-size:12px;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    color:var(--cream-dim);
+    margin:44px 0 18px;
+  }
+  .badge-category-label:first-of-type{margin-top:50px;}
+  .badge-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+  }
+  .badge{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    width:88px;
+  }
+  .badge-icon{
+    width:64px;height:64px;
+    border:1px solid var(--line);
+    background:var(--bg-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:19px;
+    color:var(--gold);
+    border-radius:14px;
+    transition:border-color .25s ease, transform .25s ease;
+  }
+  .badge:hover .badge-icon{border-color:var(--gold);transform:translateY(-4px);}
+  .badge-name{
+    font-size:11px;
+    color:var(--cream-dim);
+    text-align:center;
+    letter-spacing:0.2px;
+    line-height:1.3;
+  }
+
+  /* STRATEGY */
+  .framework-grid{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-top:50px;
+  }
+  .framework-step{
+    background:var(--bg);
+    padding:22px 16px;
+  }
+  .framework-step .fs-num{
+    font-family:var(--serif);
+    color:var(--gold);
+    font-size:13px;
+    margin-bottom:8px;
+  }
+  .framework-step h4{
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:8px;
+    color:var(--cream);
+  }
+  .framework-step p{
+    font-size:11.5px;
+    color:var(--cream-dim);
+    line-height:1.45;
+  }
+
+  .case-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    margin-top:50px;
+  }
+  .case-card{
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    padding:32px;
+  }
+  .case-card .case-cat{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:10px;
+  }
+  .case-card h3{
+    font-family:var(--serif);
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:18px;
+  }
+  .case-block{margin-bottom:14px;}
+  .case-block:last-child{margin-bottom:0;}
+  .case-block .cb-label{
+    font-size:10.5px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--cream-dim);
+    margin-bottom:4px;
+  }
+  .case-block .cb-text{
+    font-size:14px;
+    color:var(--cream);
+    line-height:1.5;
+  }
+  .case-block.insight{
+    border-left:2px solid var(--gold);
+    background:rgba(201,168,76,0.06);
+    padding:10px 14px;
+  }
+  .case-block.bigidea .cb-text{
+    font-family:var(--serif);
+    font-style:italic;
+    color:var(--gold);
+  }
+
+  .strategy-cta{
+    margin-top:50px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    flex-wrap:wrap;
+    padding:28px 32px;
+    border:1px solid var(--line);
+    background:var(--bg-soft);
+  }
+  .strategy-cta p{
+    font-size:14px;
+    color:var(--cream-dim);
+    max-width:520px;
+  }
+  .strategy-cta p strong{color:var(--cream);font-weight:500;}
+
+  /* PROJECTS */
+  .projects-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+    margin-top:60px;
+  }
+  .project-card{
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform .35s ease, border-color .35s ease;
+  }
+  .project-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--gold-soft);
+  }
+  .project-media{
+    aspect-ratio:4/3;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .project-media::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(160deg, rgba(201,168,76,0.16), rgba(10,10,10,0.85));
+  }
+  .project-media.has-image::after{
+    background:linear-gradient(190deg, rgba(10,10,10,0) 55%, rgba(10,10,10,0.75) 100%);
+  }
+  .project-media img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:0;
+    transition:transform .6s ease;
+  }
+  .project-media.contain{background:var(--bg-soft);}
+  .project-media.contain img{object-fit:contain;}
+  .project-media.contain::after{background:none;}
+  .project-card:hover .project-media img{
+    transform:scale(1.05);
+  }
+  .project-num{
+    font-family:var(--serif);
+    font-size:15px;
+    color:var(--cream-dim);
+    position:relative;
+    z-index:1;
+    letter-spacing:2px;
+  }
+  .project-media.has-image .project-num{
+    position:absolute;
+    top:14px;
+    left:14px;
+    background:rgba(10,10,10,0.55);
+    border:1px solid var(--line);
+    padding:5px 10px;
+    font-size:12px;
+    z-index:2;
+  }
+  .project-body{
+    padding:30px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+  }
+  .project-tag-row{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+  .project-body h3{
+    font-family:var(--serif);
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:14px;
+    line-height:1.25;
+  }
+  .project-body p{
+    font-size:14.5px;
+    color:var(--cream-dim);
+    flex:1;
+    margin-bottom:20px;
+  }
+  .project-tools{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+  }
+  .project-tools span{
+    font-size:11.5px;
+    color:var(--cream-dim);
+  }
+  .project-tools span:not(:last-child)::after{
+    content:"·";
+    margin-left:8px;
+    color:var(--gold-soft);
+  }
+
+  /* CONTACT */
+  .contact-wrap{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:80px;
+    align-items:start;
+  }
+  .contact-big{
+    font-family:var(--serif);
+    font-size:clamp(28px, 3.4vw, 42px);
+    font-weight:500;
+    line-height:1.35;
+    color:var(--cream-dim);
+  }
+  .contact-big em{color:var(--gold);font-style:italic;}
+  .contact-list{list-style:none;}
+  .contact-list li{
+    border-top:1px solid var(--line);
+    padding:22px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .contact-list li:last-child{border-bottom:1px solid var(--line);}
+  .contact-list .label{
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--cream-dim);
+  }
+  .contact-list .value{
+    font-family:var(--serif);
+    font-size:18px;
+    color:var(--cream);
+    transition:color .25s ease;
+  }
+  .contact-list a:hover .value{color:var(--gold);}
+  .arrow{
+    color:var(--gold);
+    transition:transform .25s ease;
+    display:inline-block;
+  }
+  .contact-list a:hover .arrow{transform:translateX(4px);}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:40px 0;
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+    font-size:12.5px;
+    color:var(--cream-dim);
+    letter-spacing:0.5px;
+  }
+  .footer-inner .status{
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .dot{
+    width:7px;height:7px;
+    border-radius:50%;
+    background:#5fd97e;
+    box-shadow:0 0 0 4px rgba(95,217,126,0.15);
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity .8s ease, transform .8s ease;
+  }
+  .reveal.visible{opacity:1;transform:translateY(0);}
+
+  @media (max-width:900px){
+    .about-grid, .contact-wrap{grid-template-columns:1fr;gap:44px;}
+    .skills-grid{grid-template-columns:1fr;}
+    .projects-grid{grid-template-columns:1fr 1fr;}
+    .framework-grid{grid-template-columns:repeat(3, 1fr);}
+    .case-grid{grid-template-columns:1fr;}
+    .hero-grid{grid-template-columns:1fr;gap:40px;}
+    .hero-photo{max-width:340px;order:-1;}
+  }
+  @media (max-width:640px){
+    .container{padding:0 22px;}
+    nav{padding:18px 22px;}
+    .nav-links{
+      position:fixed;
+      top:64px;left:0;right:0;
+      background:rgba(10,10,10,0.98);
+      border-bottom:1px solid var(--line);
+      flex-direction:column;
+      padding:24px 22px;
+      gap:22px;
+      transform:translateY(-140%);
+      transition:transform .3s ease;
+    }
+    .nav-links.open{transform:translateY(0);}
+    .nav-toggle{display:block;}
+    .projects-grid{grid-template-columns:1fr;}
+    .stat-row{gap:32px;}
+    section{padding:90px 0;}
+    .framework-grid{grid-template-columns:repeat(2, 1fr);}
+    .strategy-cta{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <a href="#top" class="logo">MUAZZEZ <span>DURDU</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#strategy">Strategy</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-inner">
+        <div class="eyebrow">Cologne, Germany</div>
+        <h1>Brand Strategist, Social Media Manager<br>&amp; <em>AI Creative Producer</em></h1>
+        <p class="hero-sub">
+          I'm a Cologne-based strategist and creative producer combining a B.Sc. in Business
+          Administration with self-directed brand strategy work — 28 case studies in consumer
+          insight and positioning — and hands-on Generative AI production for luxury and
+          lifestyle brands.
+        </p>
+        <div class="hero-actions">
+          <a href="#strategy" class="btn btn-primary">View Strategy Work</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+
+        <div class="stat-row">
+          <div><strong>28</strong>Strategic brand case studies</div>
+          <div><strong>6-Step</strong>Proprietary strategy framework</div>
+          <div><strong>34.5M</strong>Social &amp; Content — views on a single Instagram video</div>
+          <div><strong>4</strong>Languages — DE·EN·TR·FR</div>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="images/profile.jpg" alt="Muazzez Durdu">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label"><span>About</span></div>
+      <h2 class="section-title reveal">Visualizing what doesn't exist yet.</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm <strong>Muazzez</strong> — a Cologne-based Brand Strategist, Social Media
+          Manager and AI Creative Producer combining a B.Sc. in Business Administration with
+          self-directed strategic case study work across luxury, technology, wellness,
+          education, travel and finance.</p>
+
+          <p>I produce luxury-level visual and video content independently using
+          <strong>MidJourney, Veo, Kling 3.0</strong> and Adobe Creative Suite — and I back every
+          creative decision with GA4 and Power BI analytics.</p>
+
+          <p>Most recently I developed <strong>Pearl Aura</strong>, an AI-powered cognitive
+          fragrance concept presented at L'Oréal Brandstorm 2026.</p>
+
+          <p>Open to full-time roles, freelance projects and creative collaborations worldwide.</p>
+
+          <div class="langs">
+            <div class="lang-pill">Turkish <b>Native</b></div>
+            <div class="lang-pill">German <b>C1</b></div>
+            <div class="lang-pill">English <b>C1</b></div>
+            <div class="lang-pill">French <b>B1</b></div>
+          </div>
+        </div>
+
+        <div class="about-side reveal">
+          <div class="video-card">
+            <video controls playsinline preload="metadata">
+              <source src="images/genai-talk.mov" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-caption">
+            <p>"No studio, no photographer, no budget — just structured prompt engineering
+            and creative vision."</p>
+            <div class="quote-tag">On producing AI campaigns end-to-end</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label"><span>Capabilities</span></div>
+      <h2 class="section-title reveal">Skills &amp; Tools</h2>
+
+      <div class="skills-grid reveal">
+        <div class="skill-card">
+          <h3>Brand Strategy</h3>
+          <div class="tag-list">
+            <span class="tag">Consumer Insight</span>
+            <span class="tag">Brand Positioning</span>
+            <span class="tag">Persona Development</span>
+            <span class="tag">Competitive Analysis</span>
+            <span class="tag">Strategic Frameworks</span>
+            <span class="tag">Human Truth Discovery</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Generative AI</h3>
+          <div class="tag-list">
+            <span class="tag">MidJourney</span>
+            <span class="tag">Veo</span>
+            <span class="tag">Kling 3.0</span>
+            <span class="tag">Seedance 2.0</span>
+            <span class="tag">Higgsfield</span>
+            <span class="tag">Nano Banana 2</span>
+            <span class="tag">Adobe Firefly</span>
+            <span class="tag">ElevenLabs</span>
+            <span class="tag">Claude</span>
+            <span class="tag">Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Adobe Creative Suite</h3>
+          <div class="tag-list">
+            <span class="tag">Photoshop</span>
+            <span class="tag">Illustrator</span>
+            <span class="tag">InDesign</span>
+            <span class="tag">Premiere Pro</span>
+            <span class="tag">After Effects</span>
+            <span class="tag">Express</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Content &amp; Social Media</h3>
+          <div class="tag-list">
+            <span class="tag">TikTok</span>
+            <span class="tag">Instagram</span>
+            <span class="tag">Facebook</span>
+            <span class="tag">LinkedIn</span>
+            <span class="tag">Meta Business Suite</span>
+            <span class="tag">Community Management (DE/EN)</span>
+            <span class="tag">Content Strategy</span>
+            <span class="tag">Creator Marketing</span>
+            <span class="tag">UGC Management</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Data &amp; Analytics</h3>
+          <div class="tag-list">
+            <span class="tag">Google Analytics 4</span>
+            <span class="tag">Google Ads</span>
+            <span class="tag">Google Ads AI-Powered Performance</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Advanced Excel</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Video Editing</h3>
+          <div class="tag-list">
+            <span class="tag">CapCut</span>
+            <span class="tag">Adobe Premiere Pro</span>
+            <span class="tag">After Effects</span>
+            <span class="tag">DaVinci Resolve</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <div class="tag-list">
+            <span class="tag">Turkish — Native</span>
+            <span class="tag">German — C1</span>
+            <span class="tag">English — C1</span>
+            <span class="tag">French — B1</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="badge-category-label reveal">Adobe Creative Cloud</div>
+      <div class="badge-row reveal">
+        <div class="badge"><div class="badge-icon">Ps</div><div class="badge-name">Photoshop</div></div>
+        <div class="badge"><div class="badge-icon">Ai</div><div class="badge-name">Illustrator</div></div>
+        <div class="badge"><div class="badge-icon">Id</div><div class="badge-name">InDesign</div></div>
+        <div class="badge"><div class="badge-icon">Pr</div><div class="badge-name">Premiere Pro</div></div>
+        <div class="badge"><div class="badge-icon">Ae</div><div class="badge-name">After Effects</div></div>
+        <div class="badge"><div class="badge-icon">Ex</div><div class="badge-name">Express</div></div>
+      </div>
+
+      <div class="badge-category-label reveal">Generative AI</div>
+      <div class="badge-row reveal">
+        <div class="badge"><div class="badge-icon">Mj</div><div class="badge-name">MidJourney</div></div>
+        <div class="badge"><div class="badge-icon">Ve</div><div class="badge-name">Veo</div></div>
+        <div class="badge"><div class="badge-icon">Kl</div><div class="badge-name">Kling 3.0</div></div>
+        <div class="badge"><div class="badge-icon">Sd</div><div class="badge-name">Seedance 2.0</div></div>
+        <div class="badge"><div class="badge-icon">Hf</div><div class="badge-name">Higgsfield</div></div>
+        <div class="badge"><div class="badge-icon">Nb</div><div class="badge-name">Nano Banana 2</div></div>
+        <div class="badge"><div class="badge-icon">Ff</div><div class="badge-name">Adobe Firefly</div></div>
+        <div class="badge"><div class="badge-icon">11</div><div class="badge-name">ElevenLabs</div></div>
+        <div class="badge"><div class="badge-icon">Cl</div><div class="badge-name">Claude</div></div>
+      </div>
+
+      <div class="badge-category-label reveal">Analytics &amp; Growth</div>
+      <div class="badge-row reveal">
+        <div class="badge"><div class="badge-icon">G4</div><div class="badge-name">GA4</div></div>
+        <div class="badge"><div class="badge-icon">Bi</div><div class="badge-name">Power BI</div></div>
+        <div class="badge"><div class="badge-icon">Ad</div><div class="badge-name">Google Ads</div></div>
+        <div class="badge"><div class="badge-icon">Mb</div><div class="badge-name">Meta Business Suite</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRATEGY -->
+  <section id="strategy">
+    <div class="container">
+      <div class="section-label"><span>Strategy</span></div>
+      <h2 class="section-title reveal">What Are People Really Buying?</h2>
+      <p class="section-intro reveal">
+        A self-directed portfolio of 28 strategic case studies spanning luxury, technology,
+        wellness, education, travel and finance — each one built around consumer insight,
+        human truth discovery and brand positioning rather than surface product features.
+      </p>
+
+      <div class="framework-grid reveal">
+        <div class="framework-step">
+          <div class="fs-num">01</div>
+          <h4>Human Truth</h4>
+          <p>A universal truth about unvarnished human behavior.</p>
+        </div>
+        <div class="framework-step">
+          <div class="fs-num">02</div>
+          <h4>Problem</h4>
+          <p>A structural business or brand challenge.</p>
+        </div>
+        <div class="framework-step">
+          <div class="fs-num">03</div>
+          <h4>Insight</h4>
+          <p>The hidden motivation driving consumer behavior.</p>
+        </div>
+        <div class="framework-step">
+          <div class="fs-num">04</div>
+          <h4>Positioning</h4>
+          <p>The distinct strategic territory a brand can own.</p>
+        </div>
+        <div class="framework-step">
+          <div class="fs-num">05</div>
+          <h4>Big Idea</h4>
+          <p>The creative expression of the strategic positioning.</p>
+        </div>
+        <div class="framework-step">
+          <div class="fs-num">06</div>
+          <h4>Opportunity</h4>
+          <p>The business value created by the insight.</p>
+        </div>
+      </div>
+
+      <div class="case-grid">
+
+        <div class="case-card reveal">
+          <div class="case-cat">Luxury Fashion · Case 01</div>
+          <h3>Chanel</h3>
+          <div class="case-block insight">
+            <div class="cb-label">Consumer Insight</div>
+            <div class="cb-text">Young luxury consumers don't want to look connected to the
+            past; they want to represent the success story of their own generation.</div>
+          </div>
+          <div class="case-block">
+            <div class="cb-label">Positioning</div>
+            <div class="cb-text">Modern Heritage</div>
+          </div>
+          <div class="case-block bigidea">
+            <div class="cb-label">Big Idea</div>
+            <div class="cb-text">"This is not my mother's Chanel. This is my Chanel."</div>
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-cat">Beverage · Case 04</div>
+          <h3>Red Bull</h3>
+          <div class="case-block insight">
+            <div class="cb-label">Consumer Insight</div>
+            <div class="cb-text">Consumers are not buying energy; they are buying the
+            feeling of performance.</div>
+          </div>
+          <div class="case-block">
+            <div class="cb-label">Positioning</div>
+            <div class="cb-text">Natural Energy Without Compromise</div>
+          </div>
+          <div class="case-block">
+            <div class="cb-label">Strategic Opportunity</div>
+            <div class="cb-text">Own the strategic territory between health and performance.</div>
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-cat">Travel &amp; Remote Work · Case 03</div>
+          <h3>Airbnb</h3>
+          <div class="case-block insight">
+            <div class="cb-label">Consumer Insight</div>
+            <div class="cb-text">People want freedom, but freedom can become loneliness.</div>
+          </div>
+          <div class="case-block">
+            <div class="cb-label">Positioning</div>
+            <div class="cb-text">Work Anywhere. Belong Everywhere.</div>
+          </div>
+          <div class="case-block">
+            <div class="cb-label">Strategic Opportunity</div>
+            <div class="cb-text">Transform accommodation into community.</div>
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-cat">Education · Case 09</div>
+          <h3>Learning Platform</h3>
+          <div class="case-block insight">
+            <div class="cb-label">Consumer Insight</div>
+            <div class="cb-text">Buying a course creates a faster feeling of success than
+            completing one.</div>
+          </div>
+          <div class="case-block">
+            <div class="cb-label">Positioning Opportunity</div>
+            <div class="cb-text">Celebrate progress during active learning rather than only
+            at completion.</div>
+          </div>
+          <div class="case-block">
+            <div class="cb-label">Key Learning</div>
+            <div class="cb-text">People are investing in future identity more than content.</div>
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-cat">Mental Wellness · Case 11</div>
+          <h3>Meditation App</h3>
+          <div class="case-block insight">
+            <div class="cb-label">Consumer Insight</div>
+            <div class="cb-text">People use meditation to escape before they use it to
+            improve.</div>
+          </div>
+          <div class="case-block">
+            <div class="cb-label">Positioning</div>
+            <div class="cb-text">Escape</div>
+          </div>
+          <div class="case-block bigidea">
+            <div class="cb-label">Big Idea</div>
+            <div class="cb-text">Escape The Noise</div>
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-cat">Self-Improvement Tech · Case 28</div>
+          <h3>Personal Growth Platform</h3>
+          <div class="case-block insight">
+            <div class="cb-label">Consumer Insight</div>
+            <div class="cb-text">People do not only want growth; they want to feel growth.</div>
+          </div>
+          <div class="case-block">
+            <div class="cb-label">Positioning</div>
+            <div class="cb-text">You're Further Than You Think</div>
+          </div>
+          <div class="case-block bigidea">
+            <div class="cb-label">Big Idea</div>
+            <div class="cb-text">See How Far You've Come</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="quote-card reveal" style="margin-top:50px;">
+        <p>"The role of strategy is not simply to understand what people buy.
+        The role of strategy is to understand why they buy it."</p>
+        <div class="quote-tag">Strategist's Reflection</div>
+      </div>
+
+      <div class="strategy-cta reveal">
+        <p><strong>28 case studies in total</strong> — spanning dating apps, fintech, fashion
+        e-commerce, coffee retail, therapy platforms and more, each built on the same
+        six-step strategic framework.</p>
+        <a href="assets/Muazzez-Durdu-Brand-Strategy-Portfolio.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Download Full Portfolio (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI CREATIVE WORK -->
+  <section id="work">
+    <div class="container">
+      <div class="section-label"><span>Selected Work</span></div>
+      <h2 class="section-title reveal">AI Creative Production</h2>
+      <p class="section-intro reveal">
+        Independent Generative AI campaigns produced end-to-end — concept, prompt
+        engineering, visual production and post. A selection below; more available on
+        request.
+      </p>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-media has-image">
+            <img src="images/pearl-aura.png" alt="Pearl Aura — AI-powered cognitive fragrance concept, L'Oréal Brandstorm 2026" loading="lazy">
+            <span class="project-num">01</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tag-row">L'Oréal Brandstorm 2026</div>
+            <h3>Pearl Aura</h3>
+            <p>AI-powered cognitive fragrance concept featuring real-time emotion detection
+            and dynamic scent adaptation. Developed independently and presented at L'Oréal
+            Brandstorm 2026 — the world's only certified youth innovation competition. Full
+            business model, sustainability framework and AI-generated campaign visuals included.</p>
+            <div class="project-tools">
+              <span>MidJourney</span><span>Adobe Express</span><span>Veo</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-media has-image">
+            <img src="images/rabanne.jpg" alt="Rabanne Olympéa Elixir — AI-generated luxury fragrance campaign" loading="lazy">
+            <span class="project-num">02</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tag-row">Independent Concept</div>
+            <h3>Rabanne Olympéa Elixir — AI Campaign</h3>
+            <p>Full luxury fragrance campaign produced entirely with Generative AI. No studio,
+            no photographer, no budget — just structured prompt engineering and creative
+            vision. Campaign-level visuals indistinguishable from professional shoots.</p>
+            <div class="project-tools">
+              <span>MidJourney</span><span>Veo</span><span>Kling 3.0</span><span>Adobe Express</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-media has-image">
+            <img src="images/kapten-son.jpg" alt="Kapten &amp; Son — AI-generated concept brand campaign" loading="lazy">
+            <span class="project-num">03</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tag-row">Independent Concept</div>
+            <h3>Kapten &amp; Son — Brand Campaign</h3>
+            <p>Independent concept advertising campaign for premium lifestyle brand
+            Kapten &amp; Son. Created using AI tools to demonstrate brand-aligned visual
+            production capability.</p>
+            <div class="project-tools">
+              <span>MidJourney</span><span>Adobe Express</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT CREATION -->
+  <section id="content">
+    <div class="container">
+      <div class="section-label"><span>Content Creation</span></div>
+      <h2 class="section-title reveal">Social Media &amp; Content</h2>
+      <p class="section-intro reveal">
+        Alongside strategy and AI production, I run independent creator accounts across
+        TikTok, Instagram and YouTube — building organic reach without paid budget.
+      </p>
+
+      <div class="stat-row reveal">
+        <div><strong>34.5M</strong>Views on a single Instagram video</div>
+        <div><strong>4.7M</strong>Views on a single TikTok video, zero paid budget</div>
+        <div><strong>11.5K</strong>Verified followers · @muazzezdurduu</div>
+      </div>
+
+      <div class="projects-grid" style="margin-top:50px;">
+
+        <article class="project-card reveal">
+          <div class="project-media has-image">
+            <img src="images/instagram.jpeg" alt="Instagram analytics screenshot showing 34,595,545 views" loading="lazy">
+            <span class="project-num">01</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tag-row">TikTok · Instagram</div>
+            <h3>Social Media — 34.5M Views</h3>
+            <p>Organic content strategy achieving 34.5 million views on a single Instagram
+            video and 4.7 million on a single TikTok video — zero paid budget. Built through
+            hook engineering, trend analysis and platform algorithm understanding in the
+            German market.</p>
+            <div class="project-tools">
+              <span><a href="https://www.instagram.com/muazzezdurduu/" target="_blank" rel="noopener">@muazzezdurduu (IG)</a></span><span><a href="https://www.tiktok.com/@muazzezdurduu" target="_blank" rel="noopener">@muazzezdurduu (TikTok)</a></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-media contain has-image">
+            <img src="images/muazzezcreates.jpeg" alt="@muazzezcreates profile picture" loading="lazy">
+            <span class="project-num">02</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tag-row">@muazzezcreates</div>
+            <h3>AI Creator Account</h3>
+            <p>Dedicated AI creative content account showcasing generative AI campaign
+            production, luxury brand concepts and behind-the-scenes AI workflows.
+            "Visualizing what doesn't exist yet."</p>
+            <div class="project-tools">
+              <span>MidJourney</span><span>Kling 3.0</span><span>Veo</span><span>CapCut</span>
+              <span><a href="https://www.tiktok.com/@muazzezcreates" target="_blank" rel="noopener">@muazzezcreates (TikTok)</a></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-media has-image">
+            <img src="images/valencia.jpg" alt="Muazzez Durdu — editorial fashion content, Valencia" loading="lazy" style="object-position:center 20%;">
+            <span class="project-num">03</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tag-row">@muazzezdurduu · 11.5K · Verified</div>
+            <h3>Fashion &amp; Lifestyle Content</h3>
+            <p>Aesthetic lifestyle content creation across fashion, beauty, travel and
+            wellness — combining editorial styling with strong visual identity. Curls, lips
+            &amp; the life I'm building.</p>
+            <div class="project-tools">
+              <span>Editorial Styling</span><span>Content Direction</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-media has-image">
+            <img src="images/twosidesofeverywhere.png" alt="Two Sides of Everywhere — YouTube channel banner" loading="lazy">
+            <span class="project-num">04</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tag-row">@twosidesofeverywhere · YouTube</div>
+            <h3>Two Sides of Everywhere</h3>
+            <p>Weekly YouTube series exploring luxury travel, local culture and everything
+            in between — independently filmed, edited and produced from concept to final cut.</p>
+            <div class="project-tools">
+              <span><a href="https://youtube.com/@twosidesofeverywhere" target="_blank" rel="noopener">youtube.com/@twosidesofeverywhere</a></span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label"><span>Contact</span></div>
+      <div class="contact-wrap">
+        <h2 class="contact-big reveal">Let's build something<br><em>that doesn't exist yet.</em></h2>
+
+        <ul class="contact-list reveal">
+          <li>
+            <a href="mailto:durdumuazzez@gmail.com" style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+              <span class="label">Email</span>
+              <span class="value">durdumuazzez@gmail.com <span class="arrow">&#8599;</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/muazzezdurduu" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+              <span class="label">LinkedIn</span>
+              <span class="value">linkedin.com/in/muazzezdurduu <span class="arrow">&#8599;</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="assets/Muazzez-Durdu-Brand-Strategy-Portfolio.pdf" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+              <span class="label">Strategy Portfolio</span>
+              <span class="value">Download PDF <span class="arrow">&#8599;</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/muazzezdurduu/" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+              <span class="label">Instagram</span>
+              <span class="value">@muazzezdurduu <span class="arrow">&#8599;</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@muazzezdurduu" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+              <span class="label">TikTok</span>
+              <span class="value">@muazzezdurduu <span class="arrow">&#8599;</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@muazzezcreates" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+              <span class="label">AI Creative</span>
+              <span class="value">@muazzezcreates <span class="arrow">&#8599;</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com/@twosidesofeverywhere" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+              <span class="label">YouTube</span>
+              <span class="value">@twosidesofeverywhere <span class="arrow">&#8599;</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://olive-alley-179.notion.site/Muazzez-Durdu" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+              <span class="label">Full Portfolio</span>
+              <span class="value">Notion Site <span class="arrow">&#8599;</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>&copy; <span id="year"></span> Muazzez Durdu. Cologne, Germany.</div>
+    <div class="status"><span class="dot"></span> Available for full-time &amp; freelance work</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
