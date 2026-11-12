@@ -842,6 +842,22 @@
     .framework-grid{grid-template-columns:repeat(2, 1fr);}
     .strategy-cta{flex-direction:column;align-items:flex-start;}
   }
+  /* STATIC IMAGES */
+  .badge-img{width:64px;height:64px;border-radius:14px;display:block;transition:transform .25s ease;}
+  .badge:hover .badge-img{transform:translateY(-4px);}
+  .case-img{margin:0;transition:transform .3s ease;}
+  .case-img:hover{transform:translateY(-4px);}
+  .case-img img{width:100%;height:auto;display:block;}
+  .cert-grid{background:none;border:none;gap:20px;}
+  .cert-card{padding:20px;border:1px solid var(--line);background:var(--bg-soft);}
+  .cert-thumb{display:block;border:1px solid var(--line);margin-bottom:16px;overflow:hidden;cursor:zoom-in;background:#fff;}
+  .cert-thumb img{width:100%;height:auto;display:block;transition:transform .4s ease;}
+  .cert-thumb:hover img{transform:scale(1.03);}
+  .cert-title{font-size:16.5px;}
+  .lightbox{position:fixed;inset:0;background:rgba(5,5,5,.93);display:none;align-items:center;justify-content:center;z-index:200;padding:24px;cursor:zoom-out;}
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:min(1100px,100%);max-height:90vh;width:auto;height:auto;border:1px solid var(--gold-soft);box-shadow:0 20px 80px rgba(0,0,0,.6);}
+  .lightbox-close{position:absolute;top:14px;right:22px;font-size:34px;line-height:1;color:var(--cream);background:none;border:none;cursor:pointer;}
 </style>
 </head>
 <body>
@@ -926,7 +942,7 @@
 
         <div class="about-side reveal">
           <div class="video-card">
-            <video controls playsinline preload="metadata">
+            <video controls playsinline preload="none" poster="images/genai-poster.jpg">
               <source src="images/genai-talk.mov" type="video/mp4">
             </video>
           </div>
@@ -1030,33 +1046,33 @@
 
       <div class="badge-category-label reveal">Adobe Creative Cloud</div>
       <div class="badge-row reveal">
-        <div class="badge"><div class="badge-icon">Ps</div><div class="badge-name">Photoshop</div></div>
-        <div class="badge"><div class="badge-icon">Ai</div><div class="badge-name">Illustrator</div></div>
-        <div class="badge"><div class="badge-icon">Id</div><div class="badge-name">InDesign</div></div>
-        <div class="badge"><div class="badge-icon">Pr</div><div class="badge-name">Premiere Pro</div></div>
-        <div class="badge"><div class="badge-icon">Ae</div><div class="badge-name">After Effects</div></div>
-        <div class="badge"><div class="badge-icon">Ex</div><div class="badge-name">Express</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/ps.png" alt="Photoshop" width="64" height="64" loading="lazy"><div class="badge-name">Photoshop</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/ai.png" alt="Illustrator" width="64" height="64" loading="lazy"><div class="badge-name">Illustrator</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/id.png" alt="InDesign" width="64" height="64" loading="lazy"><div class="badge-name">InDesign</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/pr.png" alt="Premiere Pro" width="64" height="64" loading="lazy"><div class="badge-name">Premiere Pro</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/ae.png" alt="After Effects" width="64" height="64" loading="lazy"><div class="badge-name">After Effects</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/ex.png" alt="Express" width="64" height="64" loading="lazy"><div class="badge-name">Express</div></div>
       </div>
 
       <div class="badge-category-label reveal">Generative AI</div>
       <div class="badge-row reveal">
-        <div class="badge"><div class="badge-icon">Mj</div><div class="badge-name">MidJourney</div></div>
-        <div class="badge"><div class="badge-icon">Ve</div><div class="badge-name">Veo</div></div>
-        <div class="badge"><div class="badge-icon">Kl</div><div class="badge-name">Kling 3.0</div></div>
-        <div class="badge"><div class="badge-icon">Sd</div><div class="badge-name">Seedance 2.0</div></div>
-        <div class="badge"><div class="badge-icon">Hf</div><div class="badge-name">Higgsfield</div></div>
-        <div class="badge"><div class="badge-icon">Nb</div><div class="badge-name">Nano Banana 2</div></div>
-        <div class="badge"><div class="badge-icon">Ff</div><div class="badge-name">Adobe Firefly</div></div>
-        <div class="badge"><div class="badge-icon">11</div><div class="badge-name">ElevenLabs</div></div>
-        <div class="badge"><div class="badge-icon">Cl</div><div class="badge-name">Claude</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/mj.png" alt="MidJourney" width="64" height="64" loading="lazy"><div class="badge-name">MidJourney</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/ve.png" alt="Veo" width="64" height="64" loading="lazy"><div class="badge-name">Veo</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/kl.png" alt="Kling 3.0" width="64" height="64" loading="lazy"><div class="badge-name">Kling 3.0</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/sd.png" alt="Seedance 2.0" width="64" height="64" loading="lazy"><div class="badge-name">Seedance 2.0</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/hf.png" alt="Higgsfield" width="64" height="64" loading="lazy"><div class="badge-name">Higgsfield</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/nb.png" alt="Nano Banana 2" width="64" height="64" loading="lazy"><div class="badge-name">Nano Banana 2</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/ff.png" alt="Adobe Firefly" width="64" height="64" loading="lazy"><div class="badge-name">Adobe Firefly</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/el.png" alt="ElevenLabs" width="64" height="64" loading="lazy"><div class="badge-name">ElevenLabs</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/cl.png" alt="Claude" width="64" height="64" loading="lazy"><div class="badge-name">Claude</div></div>
       </div>
 
       <div class="badge-category-label reveal">Analytics &amp; Growth</div>
       <div class="badge-row reveal">
-        <div class="badge"><div class="badge-icon">G4</div><div class="badge-name">GA4</div></div>
-        <div class="badge"><div class="badge-icon">Bi</div><div class="badge-name">Power BI</div></div>
-        <div class="badge"><div class="badge-icon">Ad</div><div class="badge-name">Google Ads</div></div>
-        <div class="badge"><div class="badge-icon">Mb</div><div class="badge-name">Meta Business Suite</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/g4.png" alt="GA4" width="64" height="64" loading="lazy"><div class="badge-name">GA4</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/bi.png" alt="Power BI" width="64" height="64" loading="lazy"><div class="badge-name">Power BI</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/ad.png" alt="Google Ads" width="64" height="64" loading="lazy"><div class="badge-name">Google Ads</div></div>
+        <div class="badge"><img class="badge-img" src="images/tools/mb.png" alt="Meta Business Suite" width="64" height="64" loading="lazy"><div class="badge-name">Meta Business Suite</div></div>
       </div>
     </div>
   </section>
@@ -1071,7 +1087,7 @@
         completed alongside self-directed project work.
       </p>
 
-      <div class="badge-category-label reveal" style="margin-top:0;">Brand &amp; Marketing Strategy</div>
+<div class="badge-category-label reveal" style="margin-top:40px;">Brand &amp; Marketing Strategy</div>
       <div class="cert-grid reveal">
 
         <div class="cert-card">
@@ -1096,9 +1112,10 @@
         </div>
 
         <div class="cert-card">
-          <div class="cert-issuer">LinkedIn Learning</div>
+          <a class="cert-thumb" href="images/certs/hootsuite.jpg" data-alt="Certificate: Social Media Marketing Professional Certificate" aria-label="View certificate: Social Media Marketing Professional Certificate"><img src="images/certs/hootsuite.jpg" alt="Certificate: Social Media Marketing Professional Certificate" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">LinkedIn Learning · May 2026</div>
           <div class="cert-title">Social Media Marketing Professional Certificate</div>
-          <div class="cert-meta">Hootsuite<br>May 2026</div>
+          <div class="cert-meta">Hootsuite</div>
         </div>
 
       </div>
@@ -1114,23 +1131,25 @@
         </div>
 
         <div class="cert-card">
-          <div class="cert-issuer">Meta</div>
+          <a class="cert-thumb" href="images/certs/meta-smm-v2.jpg" data-alt="Certificate: Social Media Marketing Professional Certificate (v.2)" aria-label="View certificate: Social Media Marketing Professional Certificate (v.2)"><img src="images/certs/meta-smm-v2.jpg" alt="Certificate: Social Media Marketing Professional Certificate (v.2)" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">Meta · Aug 2026</div>
           <div class="cert-title">Social Media Marketing Professional Certificate (v.2)</div>
-          <div class="cert-meta">Meta · via Coursera<br>Aug 2026</div>
+          <div class="cert-meta">via Coursera</div>
           <a class="cert-link" href="https://www.credly.com/go/Q1tqin2T" target="_blank" rel="noopener">Verify <span class="arrow">&#8599;</span></a>
         </div>
 
         <div class="cert-card">
-          <div class="cert-issuer">Workintech</div>
+          <a class="cert-thumb" href="images/certs/workintech.jpg" data-alt="Certificate: Digital Marketing AI" aria-label="View certificate: Digital Marketing AI"><img src="images/certs/workintech.jpg" alt="Certificate: Digital Marketing AI" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">Workintech · 2026</div>
           <div class="cert-title">Digital Marketing AI</div>
-          <div class="cert-meta">96-hour program<br>2026</div>
+          <div class="cert-meta">96-hour program</div>
           <a class="cert-link" href="https://certopus.com/c/bdb5ea95ba604428a60959226b41a297" target="_blank" rel="noopener">Verify <span class="arrow">&#8599;</span></a>
         </div>
 
         <div class="cert-card">
-          <div class="cert-issuer">Google</div>
+          <a class="cert-thumb" href="images/certs/googleads.jpg" data-alt="Certificate: Google Ads Apps Certification" aria-label="View certificate: Google Ads Apps Certification"><img src="images/certs/googleads.jpg" alt="Certificate: Google Ads Apps Certification" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">Google · Dec 2025</div>
           <div class="cert-title">Google Ads Apps Certification</div>
-          <div class="cert-meta">Issued Dec 2025 · Certificate ID 170289059</div>
         </div>
 
       </div>
@@ -1139,33 +1158,38 @@
       <div class="cert-grid reveal">
 
         <div class="cert-card">
-          <div class="cert-issuer">LinkedIn Learning · Adobe</div>
+          <a class="cert-thumb" href="images/certs/illustrator.jpg" data-alt="Certificate: Essential Skills in Adobe Illustrator" aria-label="View certificate: Essential Skills in Adobe Illustrator"><img src="images/certs/illustrator.jpg" alt="Certificate: Essential Skills in Adobe Illustrator" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">LinkedIn Learning · Jun 2026</div>
           <div class="cert-title">Essential Skills in Adobe Illustrator</div>
-          <div class="cert-meta">2025 Professional Certificate<br>Jun 2026</div>
+          <div class="cert-meta">Adobe · 2025 Professional Certificate</div>
         </div>
 
         <div class="cert-card">
-          <div class="cert-issuer">LinkedIn Learning · Adobe</div>
+          <a class="cert-thumb" href="images/certs/photoshop.jpg" data-alt="Certificate: Essential Skills in Adobe Photoshop" aria-label="View certificate: Essential Skills in Adobe Photoshop"><img src="images/certs/photoshop.jpg" alt="Certificate: Essential Skills in Adobe Photoshop" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">LinkedIn Learning · Jun 2026</div>
           <div class="cert-title">Essential Skills in Adobe Photoshop</div>
-          <div class="cert-meta">2025 Professional Certificate<br>Jun 2026</div>
+          <div class="cert-meta">Adobe · 2025 Professional Certificate</div>
         </div>
 
         <div class="cert-card">
-          <div class="cert-issuer">LinkedIn Learning · Adobe</div>
+          <a class="cert-thumb" href="images/certs/premiere.jpg" data-alt="Certificate: Essential Skills in Adobe Premiere Pro" aria-label="View certificate: Essential Skills in Adobe Premiere Pro"><img src="images/certs/premiere.jpg" alt="Certificate: Essential Skills in Adobe Premiere Pro" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">LinkedIn Learning · Jun 2026</div>
           <div class="cert-title">Essential Skills in Adobe Premiere Pro</div>
-          <div class="cert-meta">2025 Professional Certificate<br>Jun 2026</div>
+          <div class="cert-meta">Adobe · 2025 Professional Certificate</div>
         </div>
 
         <div class="cert-card">
-          <div class="cert-issuer">LinkedIn Learning</div>
+          <a class="cert-thumb" href="images/certs/aftereffects.jpg" data-alt="Certificate: After Effects CC 2023 Essential Training" aria-label="View certificate: After Effects CC 2023 Essential Training"><img src="images/certs/aftereffects.jpg" alt="Certificate: After Effects CC 2023 Essential Training" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">LinkedIn Learning · Jun 2026</div>
           <div class="cert-title">After Effects CC 2023 Essential Training</div>
-          <div class="cert-meta">Course Completion<br>Jun 2026</div>
+          <div class="cert-meta">Course completion</div>
         </div>
 
         <div class="cert-card">
-          <div class="cert-issuer">LinkedIn Learning · Adobe</div>
+          <a class="cert-thumb" href="images/certs/adobe-genai.jpg" data-alt="Certificate: Essential Skills in Generative AI for Creatives" aria-label="View certificate: Essential Skills in Generative AI for Creatives"><img src="images/certs/adobe-genai.jpg" alt="Certificate: Essential Skills in Generative AI for Creatives" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">LinkedIn Learning · Jun 2026</div>
           <div class="cert-title">Essential Skills in Generative AI for Creatives</div>
-          <div class="cert-meta">Adobe<br>Jun 2026</div>
+          <div class="cert-meta">Adobe</div>
         </div>
 
       </div>
@@ -1174,30 +1198,34 @@
       <div class="cert-grid reveal">
 
         <div class="cert-card">
-          <div class="cert-issuer">Google</div>
+          <a class="cert-thumb" href="images/certs/ga4.jpg" data-alt="Certificate: Google Analytics Certification" aria-label="View certificate: Google Analytics Certification"><img src="images/certs/ga4.jpg" alt="Certificate: Google Analytics Certification" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">Google · Dec 2025</div>
           <div class="cert-title">Google Analytics Certification</div>
-          <div class="cert-meta">Issued Dec 2025 · Certificate ID 170182256</div>
         </div>
 
         <div class="cert-card">
-          <div class="cert-issuer">İstanbul Üniversitesi-Cerrahpaşa</div>
+          <a class="cert-thumb" href="images/certs/genai-iuc.jpg" data-alt="Certificate: Üretken Yapay Zeka Eğitimi (Generative AI Training)" aria-label="View certificate: Üretken Yapay Zeka Eğitimi (Generative AI Training)"><img src="images/certs/genai-iuc.jpg" alt="Certificate: Üretken Yapay Zeka Eğitimi (Generative AI Training)" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">İstanbul Üniversitesi-Cerrahpaşa · Mar 2026</div>
           <div class="cert-title">Üretken Yapay Zeka Eğitimi (Generative AI Training)</div>
-          <div class="cert-meta">with TALKTOWEB · 10 hours<br>Mar 2026</div>
+          <div class="cert-meta">with TALKTOWEB · 10 hours</div>
         </div>
 
         <div class="cert-card">
-          <div class="cert-issuer">LinkedIn Learning</div>
+          <a class="cert-thumb" href="images/certs/python.jpg" data-alt="Certificate: Programming with Python Professional Certificate" aria-label="View certificate: Programming with Python Professional Certificate"><img src="images/certs/python.jpg" alt="Certificate: Programming with Python Professional Certificate" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">LinkedIn Learning · Jun 2026</div>
           <div class="cert-title">Programming with Python Professional Certificate</div>
-          <div class="cert-meta">OpenEDG Python Institute<br>Jun 2026</div>
+          <div class="cert-meta">OpenEDG Python Institute</div>
         </div>
 
         <div class="cert-card">
-          <div class="cert-issuer">LinkedIn Learning</div>
+          <a class="cert-thumb" href="images/certs/pm-basics.jpg" data-alt="Certificate: Grundwissen Projektmanagement" aria-label="View certificate: Grundwissen Projektmanagement"><img src="images/certs/pm-basics.jpg" alt="Certificate: Grundwissen Projektmanagement" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">LinkedIn Learning · Feb 2026</div>
           <div class="cert-title">Grundwissen Projektmanagement</div>
-          <div class="cert-meta">Microsoft<br>Feb 2026</div>
+          <div class="cert-meta">Microsoft</div>
         </div>
 
       </div>
+
     </div>
   </section>
 
@@ -1246,114 +1274,12 @@
       </div>
 
       <div class="case-grid">
-
-        <div class="case-card reveal">
-          <div class="case-cat">Luxury Fashion · Case 01</div>
-          <h3>Chanel</h3>
-          <div class="case-block insight">
-            <div class="cb-label">Consumer Insight</div>
-            <div class="cb-text">Young luxury consumers don't want to look connected to the
-            past; they want to represent the success story of their own generation.</div>
-          </div>
-          <div class="case-block">
-            <div class="cb-label">Positioning</div>
-            <div class="cb-text">Modern Heritage</div>
-          </div>
-          <div class="case-block bigidea">
-            <div class="cb-label">Big Idea</div>
-            <div class="cb-text">"This is not my mother's Chanel. This is my Chanel."</div>
-          </div>
-        </div>
-
-        <div class="case-card reveal">
-          <div class="case-cat">Beverage · Case 04</div>
-          <h3>Red Bull</h3>
-          <div class="case-block insight">
-            <div class="cb-label">Consumer Insight</div>
-            <div class="cb-text">Consumers are not buying energy; they are buying the
-            feeling of performance.</div>
-          </div>
-          <div class="case-block">
-            <div class="cb-label">Positioning</div>
-            <div class="cb-text">Natural Energy Without Compromise</div>
-          </div>
-          <div class="case-block">
-            <div class="cb-label">Strategic Opportunity</div>
-            <div class="cb-text">Own the strategic territory between health and performance.</div>
-          </div>
-        </div>
-
-        <div class="case-card reveal">
-          <div class="case-cat">Travel &amp; Remote Work · Case 03</div>
-          <h3>Airbnb</h3>
-          <div class="case-block insight">
-            <div class="cb-label">Consumer Insight</div>
-            <div class="cb-text">People want freedom, but freedom can become loneliness.</div>
-          </div>
-          <div class="case-block">
-            <div class="cb-label">Positioning</div>
-            <div class="cb-text">Work Anywhere. Belong Everywhere.</div>
-          </div>
-          <div class="case-block">
-            <div class="cb-label">Strategic Opportunity</div>
-            <div class="cb-text">Transform accommodation into community.</div>
-          </div>
-        </div>
-
-        <div class="case-card reveal">
-          <div class="case-cat">Education · Case 09</div>
-          <h3>Learning Platform</h3>
-          <div class="case-block insight">
-            <div class="cb-label">Consumer Insight</div>
-            <div class="cb-text">Buying a course creates a faster feeling of success than
-            completing one.</div>
-          </div>
-          <div class="case-block">
-            <div class="cb-label">Positioning Opportunity</div>
-            <div class="cb-text">Celebrate progress during active learning rather than only
-            at completion.</div>
-          </div>
-          <div class="case-block">
-            <div class="cb-label">Key Learning</div>
-            <div class="cb-text">People are investing in future identity more than content.</div>
-          </div>
-        </div>
-
-        <div class="case-card reveal">
-          <div class="case-cat">Mental Wellness · Case 11</div>
-          <h3>Meditation App</h3>
-          <div class="case-block insight">
-            <div class="cb-label">Consumer Insight</div>
-            <div class="cb-text">People use meditation to escape before they use it to
-            improve.</div>
-          </div>
-          <div class="case-block">
-            <div class="cb-label">Positioning</div>
-            <div class="cb-text">Escape</div>
-          </div>
-          <div class="case-block bigidea">
-            <div class="cb-label">Big Idea</div>
-            <div class="cb-text">Escape The Noise</div>
-          </div>
-        </div>
-
-        <div class="case-card reveal">
-          <div class="case-cat">Self-Improvement Tech · Case 28</div>
-          <h3>Personal Growth Platform</h3>
-          <div class="case-block insight">
-            <div class="cb-label">Consumer Insight</div>
-            <div class="cb-text">People do not only want growth; they want to feel growth.</div>
-          </div>
-          <div class="case-block">
-            <div class="cb-label">Positioning</div>
-            <div class="cb-text">You're Further Than You Think</div>
-          </div>
-          <div class="case-block bigidea">
-            <div class="cb-label">Big Idea</div>
-            <div class="cb-text">See How Far You've Come</div>
-          </div>
-        </div>
-
+        <figure class="case-img reveal"><img src="images/strategy/chanel.png" alt="Chanel — Luxury Fashion, Case 01. Consumer insight: young luxury consumers don&#x27;t want to look connected to the past; they want to represent the success story of their own generation. Positioning: Modern Heritage. Big idea: This is not my mother&#x27;s Chanel. This is my Chanel." width="1320" height="1230" loading="lazy"></figure>
+        <figure class="case-img reveal"><img src="images/strategy/redbull.png" alt="Red Bull — Beverage, Case 04. Consumer insight: consumers are not buying energy; they are buying the feeling of performance. Positioning: Natural Energy Without Compromise. Strategic opportunity: own the territory between health and performance." width="1320" height="1230" loading="lazy"></figure>
+        <figure class="case-img reveal"><img src="images/strategy/airbnb.png" alt="Airbnb — Travel and Remote Work, Case 03. Consumer insight: people want freedom, but freedom can become loneliness. Positioning: Work Anywhere. Belong Everywhere. Strategic opportunity: transform accommodation into community." width="1320" height="1230" loading="lazy"></figure>
+        <figure class="case-img reveal"><img src="images/strategy/learning.png" alt="Learning Platform — Education, Case 09. Consumer insight: buying a course creates a faster feeling of success than completing one. Positioning opportunity: celebrate progress during active learning rather than only at completion. Key learning: people are investing in future identity more than content." width="1320" height="1230" loading="lazy"></figure>
+        <figure class="case-img reveal"><img src="images/strategy/meditation.png" alt="Meditation App — Mental Wellness, Case 11. Consumer insight: people use meditation to escape before they use it to improve. Positioning: Escape. Big idea: Escape The Noise." width="1320" height="1230" loading="lazy"></figure>
+        <figure class="case-img reveal"><img src="images/strategy/growth.png" alt="Personal Growth Platform — Self-Improvement Tech, Case 28. Consumer insight: people do not only want growth; they want to feel growth. Positioning: You&#x27;re Further Than You Think. Big idea: See How Far You&#x27;ve Come." width="1320" height="1230" loading="lazy"></figure>
       </div>
 
       <div class="quote-card reveal" style="margin-top:50px;">
@@ -1601,6 +1527,8 @@
   </div>
 </footer>
 
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate preview"><button class="lightbox-close" aria-label="Close">&times;</button><img alt=""></div>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -1624,6 +1552,16 @@
     });
   }, { threshold: 0.15 });
   revealEls.forEach(el => io.observe(el));
+  const lb = document.getElementById('lightbox');
+  const lbImg = lb.querySelector('img');
+  document.querySelectorAll('.cert-thumb').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    lbImg.src = a.getAttribute('href');
+    lbImg.alt = a.dataset.alt || '';
+    lb.classList.add('open');
+  }));
+  lb.addEventListener('click', () => lb.classList.remove('open'));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
 </script>
 
 </body>
