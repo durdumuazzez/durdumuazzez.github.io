@@ -1,0 +1,64 @@
+/* ===== WOW LAYER ===== */
+#bg3d{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;pointer-events:none;display:block;}
+main,footer{position:relative;z-index:1;}
+header{z-index:100;}
+.hero::after{opacity:.5;}
+
+/* preloader */
+#pre{position:fixed;inset:0;z-index:999;background:#0A0A0A;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .9s ease, visibility .9s;}
+#pre.done{opacity:0;visibility:hidden;}
+#pre .mono{font-family:var(--serif);font-size:44px;letter-spacing:6px;color:var(--cream);}
+#pre .mono span{color:var(--gold);}
+#pre .bar{width:180px;height:1px;background:rgba(245,240,232,.15);overflow:hidden;}
+#pre .bar i{display:block;height:100%;width:0;background:var(--gold);animation:load 1.3s ease forwards;}
+@keyframes load{to{width:100%}}
+
+/* progress + cursor */
+#prog{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,#8A6D1F,#C9A84C,#f0d98a);z-index:300;}
+#cur{position:fixed;left:0;top:0;width:340px;height:340px;margin:-170px 0 0 -170px;border-radius:50%;pointer-events:none;z-index:2;
+  background:radial-gradient(circle, rgba(201,168,76,.13), rgba(201,168,76,0) 65%);mix-blend-mode:screen;transition:opacity .3s;}
+@media (hover:none){#cur{display:none}}
+
+/* hero title words */
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;}
+.hero h1 .w i{display:inline-block;font-style:inherit;transform:translateY(110%) rotateX(-40deg);opacity:0;animation:wordin 1s cubic-bezier(.2,.8,.2,1) forwards;}
+@keyframes wordin{to{transform:none;opacity:1}}
+.hero-subtitle,.hero-sub,.hero-actions,.stat-row,.eyebrow{opacity:0;transform:translateY(20px);animation:fadeup 1s ease forwards;}
+.eyebrow{animation-delay:.9s}.hero-subtitle{animation-delay:1.5s}.hero-sub{animation-delay:1.7s}.hero-actions{animation-delay:1.9s}.stat-row{animation-delay:2.1s}
+@keyframes fadeup{to{opacity:1;transform:none}}
+.hero-3d{opacity:0;animation:fadeup 1.4s ease 1.2s forwards;}
+
+/* stronger reveal */
+.reveal{opacity:0;transform:perspective(900px) translateY(50px) rotateX(10deg);transform-origin:50% 100%;transition:opacity .9s ease, transform 1s cubic-bezier(.2,.8,.2,1);}
+.reveal.visible{opacity:1;transform:none;}
+
+/* section titles */
+.section-title{position:relative;}
+.section-title::after{content:"";display:block;height:2px;width:0;margin-top:18px;background:linear-gradient(90deg,var(--gold),transparent);transition:width 1.2s ease .3s;}
+.section-title.visible::after{width:140px;}
+
+/* glare + tilt cards */
+.tilt{position:relative;transform-style:preserve-3d;will-change:transform;}
+.tilt::before{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;opacity:0;transition:opacity .3s;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,236,180,.22), rgba(255,236,180,0) 45%);mix-blend-mode:screen;}
+.tilt:hover::before{opacity:1;}
+.project-card:hover .project-media img{transform:scale(1.06);}
+.project-media img{transition:transform .9s cubic-bezier(.2,.8,.2,1);}
+
+/* marquee */
+.marq{position:relative;z-index:1;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;background:rgba(10,10,10,.55);backdrop-filter:blur(6px);}
+.marq .track{display:flex;gap:56px;width:max-content;animation:marq 38s linear infinite;}
+.marq span{font-family:var(--serif);font-size:clamp(20px,3vw,34px);font-style:italic;color:rgba(245,240,232,.28);white-space:nowrap;transition:color .3s;}
+.marq span b{color:var(--gold);font-weight:400;margin-left:56px;font-style:normal;}
+.marq:hover .track{animation-play-state:paused;}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* buttons shine */
+.btn{position:relative;overflow:hidden;}
+.btn-primary::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .8s ease;}
+.btn-primary:hover::after{left:140%;}
+
+@media (prefers-reduced-motion: reduce){
+  .hero h1 .w i,.hero-subtitle,.hero-sub,.hero-actions,.stat-row,.eyebrow,.hero-3d{animation:none;opacity:1;transform:none;}
+  .marq .track{animation:none}
+}

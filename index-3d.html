@@ -874,8 +874,13 @@
   .project-card,.case-card{transition:transform .25s ease, box-shadow .25s ease;will-change:transform;}
   .project-card:hover,.case-card:hover{box-shadow:0 24px 50px rgba(0,0,0,.45);}
 </style>
+<link rel="stylesheet" href="wow.css">
 </head>
 <body>
+<div id="pre"><div class="mono">M<span>D</span></div><div class="bar"><i></i></div></div>
+<div id="prog"></div>
+<canvas id="bg3d" aria-hidden="true"></canvas>
+<div id="cur"></div>
 
 <header id="siteHeader">
   <nav>
@@ -1582,5 +1587,6 @@
 </script>
 
 <script type="module" src="hero3d.js"></script>
+<script type="module" src="wow.js"></script>
 </body>
 </html>

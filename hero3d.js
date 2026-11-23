@@ -71,12 +71,3 @@ function init(){
 }
 try{ init(); }catch(e){ console.warn('3D unavailable, showing photo', e); }
 
-if(matchMedia('(hover:hover)').matches && !reduce){
-  document.querySelectorAll('.project-card, .case-card').forEach(c=>{
-    c.addEventListener('pointermove', e=>{
-      const r=c.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-0.5, y=(e.clientY-r.top)/r.height-0.5;
-      c.style.transform=`perspective(900px) rotateY(${x*7}deg) rotateX(${-y*7}deg) translateY(-4px)`;
-    });
-    c.addEventListener('pointerleave', ()=>{ c.style.transform=''; });
-  });
-}
