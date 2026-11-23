@@ -873,6 +873,29 @@
   .hero-3d .badge span{white-space:nowrap;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--cream-dim);}
   .project-card,.case-card{transition:transform .25s ease, box-shadow .25s ease;will-change:transform;}
   .project-card:hover,.case-card:hover{box-shadow:0 24px 50px rgba(0,0,0,.45);}
+
+  /* EXPERIENCE */
+  .xp-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;margin-top:50px;}
+  .xp-list{position:relative;padding-left:30px;border-left:1px solid var(--line);}
+  .xp-item{position:relative;padding-bottom:38px;}
+  .xp-item::before{content:"";position:absolute;left:-36px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(201,168,76,.15);}
+  .xp-date{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .xp-item h3{font-family:var(--serif);font-size:22px;color:var(--cream);margin-bottom:4px;}
+  .xp-org{font-style:italic;color:var(--cream-dim);margin-bottom:12px;}
+  .xp-item ul{list-style:none;}
+  .xp-item li{position:relative;padding-left:18px;color:var(--cream-dim);font-size:15px;line-height:1.6;margin-bottom:6px;}
+  .xp-item li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:1px;background:var(--gold);}
+  .xp-side .xp-box{border:1px solid var(--line);background:var(--bg-soft);padding:28px;margin-bottom:20px;}
+  .xp-side h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:500;}
+  .xp-side p{color:var(--cream);font-family:var(--serif);font-size:19px;margin-bottom:4px;}
+  .xp-side small{color:var(--cream-dim);font-size:14px;}
+  @media (max-width:800px){.xp-grid{grid-template-columns:1fr;gap:30px;}}
+  /* extra project bits */
+  .project-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;background:#000;}
+  .project-media.has-video::after{display:none;}
+  .project-media.has-video .project-num{z-index:3;pointer-events:none;}
+  .project-link{display:inline-block;margin-top:16px;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold-soft);padding-bottom:3px;transition:color .2s,border-color .2s;}
+  .project-link:hover{color:#f0d98a;border-color:var(--gold);}
 </style>
 <link rel="stylesheet" href="wow.css">
 </head>
@@ -887,6 +910,7 @@
     <a href="#top" class="logo">MUAZZEZ <span>DURDU</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#strategy">Strategy</a></li>
       <li><a href="#work">Work</a></li>
@@ -915,6 +939,7 @@
         <div class="hero-actions">
           <a href="#strategy" class="btn btn-primary">View Strategy Work</a>
           <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          <a href="assets/Muazzez-Durdu-CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener" download>Download CV</a>
         </div>
 
         <div class="stat-row">
@@ -973,6 +998,61 @@
             <p>"No studio, no photographer, no budget — just structured prompt engineering
             and creative vision."</p>
             <div class="quote-tag">On producing AI campaigns end-to-end</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label"><span>Experience</span></div>
+      <h2 class="section-title reveal">Where I've worked.</h2>
+      <div class="xp-grid">
+        <div class="xp-list reveal">
+          <div class="xp-item">
+            <div class="xp-date">2023 – Present</div>
+            <h3>Creative Producer &amp; AI Content Specialist</h3>
+            <div class="xp-org">Freelance · Independent</div>
+            <ul>
+              <li>Concept and production of campaign visuals and video content with Generative AI tools for lifestyle and premium brand concepts.</li>
+              <li>Bilingual (DE/EN) social media content for Instagram and TikTok with strong organic reach, including 34.5M views on Instagram and 4.7M on TikTok.</li>
+              <li>Performance analysis with GA4 and Power BI to inform creative direction.</li>
+            </ul>
+          </div>
+          <div class="xp-item">
+            <div class="xp-date">Nov 2024 – Mar 2026</div>
+            <h3>SRM &amp; IT Procurement Assistant (Part-time)</h3>
+            <div class="xp-org">Generali Deutschland AG · Cologne</div>
+            <ul>
+              <li>Coordinated communication between global teams and international suppliers.</li>
+              <li>Designed KPI dashboards and delivered ad-hoc performance presentations for senior management.</li>
+            </ul>
+          </div>
+          <div class="xp-item">
+            <div class="xp-date">Nov 2023 – Oct 2024</div>
+            <h3>Customer Service Student Assistant</h3>
+            <div class="xp-org">Generali Deutschland AG · Cologne</div>
+            <ul><li>Supported managers and experts on strategic and operational tasks within the disability-benefits team.</li></ul>
+          </div>
+          <div class="xp-item">
+            <div class="xp-date">Oct 2021 – Sep 2023</div>
+            <h3>Claims (Regress) Department Student Assistant</h3>
+            <div class="xp-org">Generali Deutschland AG · Cologne</div>
+            <ul><li>Built Excel-based statistics and reporting; drafted procedural documentation and training materials.</li></ul>
+          </div>
+        </div>
+        <div class="xp-side reveal">
+          <div class="xp-box">
+            <h4>Education</h4>
+            <p>B.Sc. Business Administration</p>
+            <small>Heinrich Heine University Düsseldorf · Oct 2024</small>
+          </div>
+          <div class="xp-box">
+            <h4>Resume</h4>
+            <p>Full CV (PDF)</p>
+            <a class="project-link" href="assets/Muazzez-Durdu-CV.pdf" target="_blank" rel="noopener" download>Download CV</a>
           </div>
         </div>
       </div>
@@ -1115,6 +1195,28 @@
       <div class="cert-grid reveal">
 
         <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/lvmh-operations.jpg" data-alt="Certificate: INSIDE LVMH Certificate (Creation &amp; Branding, Operations &amp; Supply Chain)" aria-label="View certificate: INSIDE LVMH Certificate (Creation &amp; Branding, Operations &amp; Supply Chain)"><img src="images/certs/lvmh-operations.jpg" alt="Certificate: INSIDE LVMH Certificate (Creation &amp; Branding, Operations &amp; Supply Chain)" width="1000" height="693" loading="lazy"></a>
+          <div class="cert-issuer">LVMH · Nov 2026</div>
+          <div class="cert-title">INSIDE LVMH Certificate</div>
+          <div class="cert-meta">Specialization: Creation &amp; Branding, Operations &amp; Supply Chain</div>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/lvmh-retail.jpg" data-alt="Certificate: INSIDE LVMH Certificate (Creation &amp; Branding, Retail &amp; Customer Experience)" aria-label="View certificate: INSIDE LVMH Certificate (Creation &amp; Branding, Retail &amp; Customer Experience)"><img src="images/certs/lvmh-retail.jpg" alt="Certificate: INSIDE LVMH Certificate (Creation &amp; Branding, Retail &amp; Customer Experience)" width="1000" height="693" loading="lazy"></a>
+          <div class="cert-issuer">LVMH · Jun 2026</div>
+          <div class="cert-title">INSIDE LVMH Certificate</div>
+          <div class="cert-meta">Specialization: Creation &amp; Branding, Retail &amp; Customer Experience</div>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/brandstorm.jpg" data-alt="Certificate: L'Oréal Brandstorm 2026 Certificate of Recognition" aria-label="View certificate: L'Oréal Brandstorm 2026 Certificate of Recognition"><img src="images/certs/brandstorm.jpg" alt="Certificate: L'Oréal Brandstorm 2026 Certificate of Recognition" width="1000" height="563" loading="lazy"></a>
+          <div class="cert-issuer">L'Oréal Brandstorm 2026</div>
+          <div class="cert-title">Certificate of Recognition</div>
+          <div class="cert-meta">In recognition of participation in L'Oréal Brandstorm 2026</div>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/bocconi.jpg" data-alt="Certificate: Management of Fashion and Luxury Companies" aria-label="View certificate: Management of Fashion and Luxury Companies"><img src="images/certs/bocconi.jpg" alt="Certificate: Management of Fashion and Luxury Companies" width="1000" height="775" loading="lazy"></a>
           <div class="cert-issuer">SDA Bocconi</div>
           <div class="cert-title">Management of Fashion and Luxury Companies</div>
           <div class="cert-meta">Università Bocconi · via Coursera<br>Aug 2026</div>
@@ -1122,6 +1224,7 @@
         </div>
 
         <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/illinois.jpg" data-alt="Certificate: Global Marketing: Building Iconic Brands" aria-label="View certificate: Global Marketing: Building Iconic Brands"><img src="images/certs/illinois.jpg" alt="Certificate: Global Marketing: Building Iconic Brands" width="1000" height="773" loading="lazy"></a>
           <div class="cert-issuer">University of Illinois</div>
           <div class="cert-title">Global Marketing: Building Iconic Brands</div>
           <div class="cert-meta">Gies College of Business · via Coursera<br>Aug 2026</div>
@@ -1129,6 +1232,7 @@
         </div>
 
         <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/london.jpg" data-alt="Certificate: Brand Management: Aligning Business, Brand and Behaviour" aria-label="View certificate: Brand Management: Aligning Business, Brand and Behaviour"><img src="images/certs/london.jpg" alt="Certificate: Brand Management: Aligning Business, Brand and Behaviour" width="1000" height="775" loading="lazy"></a>
           <div class="cert-issuer">University of London</div>
           <div class="cert-title">Brand Management: Aligning Business, Brand and Behaviour</div>
           <div class="cert-meta">London Business School · via Coursera<br>Aug 2026</div>
@@ -1148,10 +1252,27 @@
       <div class="cert-grid reveal">
 
         <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/meta-smm.jpg" data-alt="Certificate: Social Media Management" aria-label="View certificate: Social Media Management"><img src="images/certs/meta-smm.jpg" alt="Certificate: Social Media Management" width="1000" height="773" loading="lazy"></a>
           <div class="cert-issuer">Meta</div>
           <div class="cert-title">Social Media Management</div>
           <div class="cert-meta">Meta · via Coursera<br>Aug 2026</div>
           <a class="cert-link" href="https://coursera.org/verify/AT7XC26VRSU8" target="_blank" rel="noopener">Verify <span class="arrow">&#8599;</span></a>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/meta-measure.jpg" data-alt="Certificate: Measure and Optimize Social Media Marketing Campaigns" aria-label="View certificate: Measure and Optimize Social Media Marketing Campaigns"><img src="images/certs/meta-measure.jpg" alt="Certificate: Measure and Optimize Social Media Marketing Campaigns" width="1000" height="774" loading="lazy"></a>
+          <div class="cert-issuer">Meta</div>
+          <div class="cert-title">Measure and Optimize Social Media Marketing Campaigns</div>
+          <div class="cert-meta">Meta · via Coursera<br>Aug 2026</div>
+          <a class="cert-link" href="https://coursera.org/verify/SFE84VEA5NT2" target="_blank" rel="noopener">Verify <span class="arrow">&#8599;</span></a>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/meta-ads.jpg" data-alt="Certificate: Advertising with Meta" aria-label="View certificate: Advertising with Meta"><img src="images/certs/meta-ads.jpg" alt="Certificate: Advertising with Meta" width="1000" height="774" loading="lazy"></a>
+          <div class="cert-issuer">Meta</div>
+          <div class="cert-title">Advertising with Meta</div>
+          <div class="cert-meta">Meta · via Coursera<br>Aug 2026</div>
+          <a class="cert-link" href="https://coursera.org/verify/J79BL1T2DTJ9" target="_blank" rel="noopener">Verify <span class="arrow">&#8599;</span></a>
         </div>
 
         <div class="cert-card">
@@ -1174,6 +1295,27 @@
           <a class="cert-thumb" href="images/certs/googleads.jpg" data-alt="Certificate: Google Ads Apps Certification" aria-label="View certificate: Google Ads Apps Certification"><img src="images/certs/googleads.jpg" alt="Certificate: Google Ads Apps Certification" width="1000" height="773" loading="lazy"></a>
           <div class="cert-issuer">Google · Dec 2025</div>
           <div class="cert-title">Google Ads Apps Certification</div>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/li-smm-foundations.jpg" data-alt="Certificate: Social Media Marketing Foundations" aria-label="View certificate: Social Media Marketing Foundations"><img src="images/certs/li-smm-foundations.jpg" alt="Certificate: Social Media Marketing Foundations" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">LinkedIn Learning · May 2026</div>
+          <div class="cert-title">Social Media Marketing Foundations</div>
+          <div class="cert-meta">1 h 16 min</div>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/li-copywriting.jpg" data-alt="Certificate: Marketing: Copywriting for Social Media" aria-label="View certificate: Marketing: Copywriting for Social Media"><img src="images/certs/li-copywriting.jpg" alt="Certificate: Marketing: Copywriting for Social Media" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">LinkedIn Learning · May 2026</div>
+          <div class="cert-title">Marketing: Copywriting for Social Media</div>
+          <div class="cert-meta">53 min</div>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/li-storytelling.jpg" data-alt="Certificate: Marketing: How to Use High-Impact Storytelling" aria-label="View certificate: Marketing: How to Use High-Impact Storytelling"><img src="images/certs/li-storytelling.jpg" alt="Certificate: Marketing: How to Use High-Impact Storytelling" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">LinkedIn Learning · May 2026</div>
+          <div class="cert-title">Marketing: How to Use High-Impact Storytelling</div>
+          <div class="cert-meta">PMI Registered Education Provider</div>
         </div>
 
       </div>
@@ -1246,6 +1388,32 @@
           <div class="cert-issuer">LinkedIn Learning · Feb 2026</div>
           <div class="cert-title">Grundwissen Projektmanagement</div>
           <div class="cert-meta">Microsoft</div>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/li-genai.jpg" data-alt="Certificate: What Is Generative AI?" aria-label="View certificate: What Is Generative AI?"><img src="images/certs/li-genai.jpg" alt="Certificate: What Is Generative AI?" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">LinkedIn Learning · May 2026</div>
+          <div class="cert-title">What Is Generative AI?</div>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/pmi-genai.jpg" data-alt="Certificate: Generative AI Overview for Project Managers" aria-label="View certificate: Generative AI Overview for Project Managers"><img src="images/certs/pmi-genai.jpg" alt="Certificate: Generative AI Overview for Project Managers" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">PMI · Jul 2025</div>
+          <div class="cert-title">Generative AI Overview for Project Managers</div>
+          <div class="cert-meta">Certificate of course completion</div>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb" href="images/certs/pmi-capm.jpg" data-alt="Certificate: CAPM Exam Prep Course" aria-label="View certificate: CAPM Exam Prep Course"><img src="images/certs/pmi-capm.jpg" alt="Certificate: CAPM Exam Prep Course" width="1000" height="773" loading="lazy"></a>
+          <div class="cert-issuer">PMI Authorized On-Demand · Aug 2025</div>
+          <div class="cert-title">CAPM® Exam Prep Course</div>
+          <div class="cert-meta">Course completion (exam prep course, not the CAPM certification)</div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-issuer">Seminar · Feb 2026</div>
+          <div class="cert-title">Excel – Aufbaukurs (Advanced Excel)</div>
+          <div class="cert-meta">2-day seminar, Berlin · lookup functions, pivot tables, conditional formatting</div>
         </div>
 
       </div>
@@ -1383,6 +1551,64 @@
             <div class="project-tools">
               <span>MidJourney</span><span>Adobe Express</span>
             </div>
+            <a class="project-link" href="https://youtu.be/jThNaUrIpjc" target="_blank" rel="noopener">Watch concept video &#8599;</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-media has-video">
+            <video controls playsinline preload="none" poster="images/brez-pirate-poster.jpg">
+              <source src="images/brez-pirate-ad.mp4" type="video/mp4">
+            </video>
+            <span class="project-num">04</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tag-row">Test Task &middot; Independent Concept</div>
+            <h3>BREZ Flow &mdash; Pirate Ad (AI Video)</h3>
+            <p>A 67-second concept ad for a sparkling-drink brand, created entirely with
+            Generative AI as a test task for an AI video editor role. Independent concept,
+            not a commissioned project and not affiliated with the brand.</p>
+            <div class="project-tools">
+              <span>Generative AI</span><span>Video editing</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-media has-image">
+            <img src="images/hook-analysis-card.jpg" alt="Hook analysis: four Instagram Reels with identical footage and different opening texts" loading="lazy" style="object-position:top;">
+            <span class="project-num">05</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tag-row">Content Analysis &middot; Organic Data</div>
+            <h3>Hook Test: Same Footage, Four Openings</h3>
+            <p>Retrospective comparison of four Instagram Reels using identical footage with
+            different opening texts (source: Instagram Insights). The hook framing a relatable
+            everyday moment drew by far the most likes and saves. Limitations: four videos,
+            organic data, not a controlled test &mdash; a hypothesis, not proof.</p>
+            <div class="project-tools">
+              <span>Instagram Insights</span><span>Hook analysis</span>
+            </div>
+            <a class="project-link" href="assets/Hook-Analysis-Muazzez.pdf" target="_blank" rel="noopener">Read the one-page analysis (PDF) &#8599;</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-media has-image">
+            <img src="images/channel-analysis-card.jpg" alt="Social media channel analysis for a premium beverage brand (concept example)" loading="lazy" style="object-position:top;">
+            <span class="project-num">06</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tag-row">Strategy &middot; Channel Analysis</div>
+            <h3>Instagram &amp; TikTok Channel Analysis + 30-Day Plan</h3>
+            <p>Concept example (in German): audience, content and platform analysis for a premium
+            beverage brand, two content ideas and a 30-day priority plan. Based on public
+            observation only; targets are hypotheses, not results. Independent concept work,
+            not affiliated with the brand.</p>
+            <div class="project-tools">
+              <span>Social strategy</span><span>TikTok</span><span>Instagram</span>
+            </div>
+            <a class="project-link" href="assets/Social-Media-Channel-Analysis-Muazzez.pdf" target="_blank" rel="noopener">View the analysis (PDF) &#8599;</a>
           </div>
         </article>
 
