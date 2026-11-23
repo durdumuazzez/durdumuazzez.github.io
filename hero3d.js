@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { RoomEnvironment } from './vendor/RoomEnvironment.js';
+import { RoomEnvironment } from './RoomEnvironment.js';
 
 const box = document.getElementById('hero3d');
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
